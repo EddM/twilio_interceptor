@@ -16,6 +16,6 @@ module TwilioInterceptorMonkeyPatch
   end
 end
 
-Twilio::REST::Messages.class_eval do
-  include TwilioInterceptorMonkeyPatch
+Twilio::REST::Api::V2010::AccountContext::MessageList.class_eval do
+  prepend TwilioInterceptorMonkeyPatch
 end
